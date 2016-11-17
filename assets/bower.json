@@ -1,0 +1,24 @@
+{
+  "name": "advising",
+  "authors": [
+    "Arnold Koh <arnold@kohded.com>"
+  ],
+  "description": "Green River Tech Course Advising App",
+  "main": "",
+  "license": "MIT",
+  "homepage": "advisingapp.greenrivertech.net",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "jquery": "^3.1.1",
+    "jquery-ui": "^1.12.1",
+    "materialize": "^0.97.7"
+  }
+}

@@ -1,0 +1,136 @@
+<div class="row">
+  <div class="col s12">
+    <div class="divider"></div>
+  </div>
+</div>
+
+<div class="row" id="degree-title" data-degree-id="{{id}}"
+  data-degree-title="{{title}}" data-degree-start="{{start}}">
+  <div class="col s12">
+    <h5>{{title}} ({{start}} Start)</h5>
+  </div>
+</div>
+
+{{#each years}}
+  <div class="row" data-degree-year-id="{{yearId}}">
+    <div class="col s12">
+      <h6>Year {{year}}</h6>
+    </div>
+    <div class="col s12 m3 degree-season">
+      <div class="card">
+        <div class="degree-season-heading valign-wrapper brown lighten-3">
+          <h6 class="valign">FALL</h6>
+        </div>
+        <div class="card-content clearfix degree-season-content no-padding">
+          <ul class="degree-season-courses" data-quarter="fall">
+            {{#each fall}}
+              <li class="degree-season-course" data-course-number="{{this}}">
+                {{#if @root.admin}}
+                  <div class="valign-wrapper degree-course-admin">
+                    {{#if this}}
+                      <i class="material-icons valign">reorder</i>
+                    {{/if}}
+                    <div class="center-align degree-course-admin-link valign">
+                      <a href="#course" class="degree-course-modal">{{this}}</a>
+                    </div>
+                  </div>
+                {{else}}
+                  <div class="valign-wrapper degree-course">
+                    <a href="#course" class="degree-course-modal">{{this}}</a>
+                  </div>
+                {{/if}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m3 degree-season">
+      <div class="card">
+        <div class="degree-season-heading valign-wrapper blue lighten-3">
+          <h6 class="valign">WINTER</h6>
+        </div>
+        <div class="card-content clearfix degree-season-content no-padding">
+          <ul class="degree-season-courses" data-quarter="winter">
+            {{#each winter}}
+              <li class="degree-season-course" data-course-number="{{this}}">
+                {{#if @root.admin}}
+                  <div class="valign-wrapper degree-course-admin">
+                    {{#if this}}
+                      <i class="material-icons valign">reorder</i>
+                    {{/if}}
+                    <div class="center-align degree-course-admin-link valign">
+                      <a href="#course" class="degree-course-modal">{{this}}</a>
+                    </div>
+                  </div>
+                {{else}}
+                  <div class="valign-wrapper degree-course">
+                    <a href="#course" class="degree-course-modal">{{this}}</a>
+                  </div>
+                {{/if}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m3 degree-season">
+      <div class="card">
+        <div class="degree-season-heading valign-wrapper green lighten-3">
+          <h6 class="valign">SPRING</h6>
+        </div>
+        <div class="card-content clearfix degree-season-content no-padding">
+          <ul class="degree-season-courses" data-quarter="spring">
+            {{#each spring}}
+              <li class="degree-season-course" data-course-number="{{this}}">
+                {{#if @root.admin}}
+                  <div class="valign-wrapper degree-course-admin">
+                    {{#if this}}
+                      <i class="material-icons valign">reorder</i>
+                    {{/if}}
+                    <div class="center-align degree-course-admin-link valign">
+                      <a href="#course" class="degree-course-modal">{{this}}</a>
+                    </div>
+                  </div>
+                {{else}}
+                  <div class="valign-wrapper degree-course">
+                    <a href="#course" class="degree-course-modal">{{this}}</a>
+                  </div>
+                {{/if}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m3 degree-season">
+      <div class="card">
+        <div class="degree-season-heading valign-wrapper yellow lighten-3">
+          <h6 class="valign">SUMMER</h6>
+        </div>
+        <div class="card-content clearfix degree-season-content no-padding">
+          <ul class="degree-season-courses" data-quarter="summer">
+            {{#each summer}}
+              <li class="degree-season-course" data-course-number="{{this}}">
+                {{#if @root.admin}}
+                  <div class="valign-wrapper degree-course-admin">
+                    {{#if this}}
+                      <i class="material-icons valign">reorder</i>
+                    {{/if}}
+                    <div class="center-align degree-course-admin-link valign">
+                      <a href="#course" class="degree-course-modal">{{this}}</a>
+                    </div>
+                  </div>
+                {{else}}
+                  <div class="valign-wrapper degree-course">
+                    <a href="#course" class="degree-course-modal">{{this}}</a>
+                  </div>
+                {{/if}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
