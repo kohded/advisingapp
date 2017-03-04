@@ -31,7 +31,9 @@
     </div>
   </form>
 
-  <?php //include 'includes/admin.php'; ?>
+  <?php if(isset($_SESSION['auth-current-user'])) { ?>
+    <?php include 'includes/admin.php'; ?>
+  <?php } ?>
 
   <!--List of degrees-->
   <div class="row">

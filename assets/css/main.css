@@ -1,72 +1,83 @@
 /*Global*/
 body {
   /*Sticky footer*/
-  display        : flex;
-  min-height     : 100vh;
-  flex-direction : column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   /*Sticky footer*/
 }
 
 a {
-  color : #4CAF50; /*Green*/
+  color: #4CAF50; /*Green*/
 }
 
 /*Nav*/
 nav {
-  margin-bottom : 20px;
+  margin-bottom: 20px;
 }
 
 #logo {
-  height : 64px;
+  height: 64px;
 }
 
 /*Main*/
 #main {
-  flex : 1 0 auto; /*sticky footer*/
+  flex: 1 0 auto; /*sticky footer*/
 }
 
 /*Footer*/
 .footer-copyright {
-  margin-left : 0.75rem;
+  margin-left: 0.75rem;
 }
 
 /*Label color*/
 .input-field label {
-  color : #000000;
+  color: #000000;
 }
 
 /*Label focus color*/
 .input-field input[type=text]:focus + label {
-  color : #4CAF50;
+  color: #4CAF50;
 }
 
 .input-field input[type=password]:focus + label {
-  color : #4CAF50;
+  color: #4CAF50;
 }
 
 /*Label underline focus color*/
 .input-field input[type=text]:focus {
-  border-bottom : 1px solid #4CAF50;
-  box-shadow    : 0 1px 0 0 #4CAF50;
+  border-bottom: 1px solid #4CAF50;
+  box-shadow: 0 1px 0 0 #4CAF50;
 }
 
 .input-field input[type=password]:focus {
-  border-bottom : 1px solid #4CAF50;
-  box-shadow    : 0 1px 0 0 #4CAF50;
+  border-bottom: 1px solid #4CAF50;
+  box-shadow: 0 1px 0 0 #4CAF50;
 }
 
 /*Dropdown*/
 .dropdown-content li span {
-  color : #4CAF50;
+  color: #4CAF50;
 }
 
 .clearfix {
-  overflow : auto;
+  overflow: auto;
+}
+
+/*Login/Logout*/
+#login-modal-btn {
+  float: right;
+  margin: 14px 10px 0 0;
+}
+
+#logout-btn {
+  float: right;
+  margin: 14px 10px 0 0;
 }
 
 /*Degree*/
 #degree-form {
-  margin-bottom : 0;
+  margin-bottom: 0;
 }
 
 #degree-map {
@@ -75,16 +86,16 @@ nav {
 
 /*Degree HBS*/
 #degree-title {
-  margin-bottom : 0;
+  margin-bottom: 0;
 }
 
 .degree-season-heading {
-  height : 40px;
+  height: 40px;
 }
 
 .degree-season-heading h6 {
-  margin-left  : auto;
-  margin-right : auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .degree-season-content > ul {
@@ -93,48 +104,110 @@ nav {
 
 .degree-course a {
   margin-bottom: 3px;
-  display    : block;
-  text-align : center;
-  width      : 100%;
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 .degree-course a:hover {
-  background-color : #EEEEEE;
+  background-color: #EEEEEE;
+}
+
+/*Admin*/
+#admin-btn-add-degree, #admin-btn-add-course, #admin-btn-update-course {
+  float: right;
 }
 
 /*Degree HBS Admin*/
-.degree-course-admin i {
+.admin-degree-course i {
   z-index: 1;
 }
 
-.degree-course-admin .degree-course-admin-link {
+.admin-degree-course .admin-course-link {
   width: 100%;
-  margin-left: -24px; /*Width of icon*/
+  margin: 0 -24px; /*Width of both icons*/
 }
 
-.degree-course-admin .degree-course-admin-link a {
-  display    : block;
-  text-align : center;
-  width      : 100%;
+.admin-degree-course .admin-course-link a {
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
-.degree-course-admin a:hover {
-  background-color : #EEEEEE;
+.admin-degree-course a:hover {
+  background-color: #EEEEEE;
+}
+
+.admin-degree-course-form .input-field {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.admin-degree-course-form .admin-input-course-number {
+  position: absolute;
+}
+
+#admin-input-course-description:focus + label, #admin-input-course-prereq:focus + label {
+  color: #4CAF50;
+}
+
+#admin-input-course-description:focus, #admin-input-course-prereq:focus {
+  border-bottom: 1px solid #4CAF50;
+  box-shadow: 0 1px 0 0 #4CAF50;
 }
 
 /*Course Modal*/
 /*Maintains the text whitespace from the db, specifically for course Gen Ed.*/
 .course-modal-description {
-  white-space : pre-wrap;
+  white-space: pre-wrap;
+}
+
+/*Collapsible*/
+.collapsible-body {
+  padding: 0 20px;
+}
+
+/*Autocomplete*/
+.autocomplete-suggestions {
+  border: 1px solid #999999;
+  background: #FFFFFF;
+}
+
+.autocomplete-suggestion {
+  padding-left: 5px
+}
+
+.autocomplete-selected {
+  background: #EEEEEE;
+}
+
+.autocomplete-suggestions strong {
+  font-weight: normal; color: #4CAF50;
 }
 
 /****** SMALL GRID ******/
-@media only screen and (min-width : 0px) and (max-width : 600px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
   #logo {
-    height : 56px;
+    height: 56px;
   }
-
+  
+  /*Login/Logout*/
+  #login-modal-btn {
+    float: right;
+    margin-top: 10px;
+  }
+  
+  #logout-btn {
+    float: right;
+    margin-top: 10px;
+  }
+  
   #degree-btn-filter {
-    margin-bottom : 20px;
+    margin-bottom: 20px;
+  }
+  
+  /*Admin*/
+  #admin-btn-delete-course {
+    margin-top: 20px;
   }
 }

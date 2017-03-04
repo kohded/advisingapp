@@ -1,7 +1,10 @@
-<?php include 'includes/layouts/header.php'; ?>
+<?php
+session_start();
 
-<?php include 'includes/layouts/nav.php'; ?>
-
-<?php include 'includes/degree.php'; ?>
-
-<?php include 'includes/layouts/footer.php'; ?>
+include 'includes/layouts/header.php';
+// Must be before nav so logout button shows when logged in without refreshing.
+include('includes/login.php');
+include 'includes/layouts/nav.php';
+include 'includes/degree.php';
+include 'includes/layouts/footer.php';
+?>

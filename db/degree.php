@@ -2,12 +2,13 @@
 /**
  * Green River IT Advising App
  * @author Arnold Koh <arnold@kohded.com>
- * @version 1.0, developed 9/23/16
+ * @version 2.0, developed 9/23/16
  * @url http://advisingapp.greenrivertech.net/
  * degree.php
+ * Database queries for degree map filtering.
  */
 
-include '../../../db.php';
+include '../../db.php';
 
 //Check if post is sent from ajax call.
 if(isset($_POST['type'])) {
